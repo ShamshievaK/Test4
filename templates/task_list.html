@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Tasks</h1>
+    {% for task in tasks %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <p class="card-text">{{ task.description }}</p>
+                <p class="card-text">Category: {{ task.category }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
